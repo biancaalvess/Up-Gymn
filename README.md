@@ -26,22 +26,10 @@ UP GYMN is a modern and responsive website for a fitness center, developed with 
 - Vercel Postgres
 - API Routes
 
-## Installation
 
-### Prerequisites
 
-- Node.js 18.17.0 or higher
-- npm or yarn
-- Vercel account (for deployment and database)
 
-### Installation Steps
 
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/up-gymn.git
-cd up-gymn
-
--------------------------------------------------------------------------------
 
 # UP GYMN - Website de Academia
 
