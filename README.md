@@ -1,3 +1,48 @@
+# UP GYMN - Gym Website
+
+UP GYMN is a modern and responsive website for a fitness center, developed with Next.js and Tailwind CSS. The site features an elegant and intuitive interface, focused on converting visitors into customers through an attractive design and registration features.
+
+## Features
+
+- **Responsive Design**: Works perfectly on mobile devices and desktops
+- **Single Page**: Smooth navigation with scrolling between sections
+- **Registration Form**: Complete registration system with integrated backend
+- **WhatsApp Integration**: Option for direct contact via WhatsApp
+- **Database**: User data storage with Vercel Postgres
+- **Modern UI**: Dark interface with modern visual elements
+- **Animations**: Subtle effects to improve the user experience
+
+## Technologies Used
+
+- **Frontend**:
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS
+- Shadcn/UI Components
+- TypeScript
+
+- **Backend**:
+- Next.js Server Actions
+- Vercel Postgres
+- API Routes
+
+## Installation
+
+### Prerequisites
+
+- Node.js 18.17.0 or higher
+- npm or yarn
+- Vercel account (for deployment and database)
+
+### Installation Steps
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/up-gymn.git
+cd up-gymn
+
+-------------------------------------------------------------------------------
+
 # UP GYMN - Website de Academia
 
 UP GYMN é um site moderno e responsivo para uma academia física, desenvolvido com Next.js e Tailwind CSS. O site apresenta uma interface elegante e intuitiva, com foco em conversão de visitantes em clientes através de um design atraente e funcionalidades de cadastro.
