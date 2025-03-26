@@ -1,6 +1,6 @@
 [build]
   command = "npm install --legacy-peer-deps && npm run build"
-  publish = "out"  # ou a pasta de build que você estiver usando
+  publish = "out"  
 
 [[redirects]]
   from = "/video.mp4"
@@ -9,6 +9,6 @@
   force = true
 
 [[headers]]
-  for = "/video.mp4"
+  for = "/public/video.mp4"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
