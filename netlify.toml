@@ -3,8 +3,8 @@
   publish = "out"  
 
 [[redirects]]
-  from = "/video.mp4"
-  to = "/video.mp4"
+  from = "/public/video.mp4"
+  to = "/public/video.mp4"
   status = 200
   force = true
 
