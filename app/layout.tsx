@@ -19,11 +19,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system" // Ou "dark" se quiser sempre escuro
+          enableSystem={true} // Permite que o sistema defina o tema
+          disableTransitionOnChange
+        >
           {children}
-          <Toaster />
         </ThemeProvider>
       </body>
     </html>

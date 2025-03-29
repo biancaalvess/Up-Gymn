@@ -227,13 +227,13 @@ export default function Home() {
               </div>
             </DialogContent>
           </Dialog>
-        </div>
+        </div> 
       </header>
       <main className="flex-1 pt-16">
         <section className="relative h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-9" />
           <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/public/video.mp4" type="video/mp4" />
+            <source src="/video.mp4" type="video/mp4" />
             Seu navegador não suporta o vídeo.
           </video>
           <div className="container relative z-20 flex flex-col items-start justify-center h-full">
