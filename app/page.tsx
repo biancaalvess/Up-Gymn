@@ -51,44 +51,34 @@ export default function Home() {
     event.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(event.currentTarget)
-    const name = formData.get("name") as string
-    const email = formData.get("email") as string
-    const phone = formData.get("phone") as string
-    const plan = formData.get("plan") as string
+    const form = event.currentTarget as HTMLFormElement // 👈 Garantindo que é um <form>
+    const formData = new FormData(form)
+
+    const name = (formData.get("name") as string) || ""
+    const email = (formData.get("email") as string) || ""
+    const phone = (formData.get("phone") as string) || ""
+    const plan = (formData.get("plan") as string) || ""
 
     try {
       const result = await registerUser({ name, email, phone, plan })
 
       if (result.success) {
-        setRegistrationNumber(result.registrationNumber)
+        setRegistrationNumber(result.registrationNumber || null)
         toast({
           title: "Cadastro realizado com sucesso!",
           description: `Seu número de cadastro é: ${result.registrationNumber}`,
           variant: "default",
         })
-        // Reset form
-        event.currentTarget.reset()
-      } else {
-        toast({
-          title: "Erro ao cadastrar",
-          description: result.error || "Ocorreu um erro ao processar seu cadastro. Tente novamente.",
-          variant: "destructive",
-        })
       }
     } catch (error) {
-      toast({
-        title: "Erro ao cadastrar",
-        description: "Ocorreu um erro ao processar seu cadastro. Tente novamente.",
-        variant: "destructive",
-      })
+      console.error("Erro ao cadastrar:", error)
     } finally {
       setIsSubmitting(false)
     }
   }
 
   const handlePlanSelect = (plan: string) => {
-    setSelectedPlan(plan || null)
+    setSelectedPlan(plan ? plan : null)
     setIsDialogOpen(true)
   }
 
@@ -227,7 +217,7 @@ export default function Home() {
               </div>
             </DialogContent>
           </Dialog>
-        </div> 
+        </div>
       </header>
       <main className="flex-1 pt-16">
         <section className="relative h-screen flex items-center">
