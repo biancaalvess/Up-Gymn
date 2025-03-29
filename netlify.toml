@@ -3,12 +3,12 @@
   publish = "out"  
 
 [[redirects]]
-  from = "/public/video.mp4"
-  to = "/public/video.mp4"
+  from = "/video.mp4"
+  to = "/video.mp4"
   status = 200
   force = true
 
 [[headers]]
-  for = "/public/video.mp4"
+  for = "/video.mp4"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
