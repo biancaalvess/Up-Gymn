@@ -222,7 +222,14 @@ export default function Home() {
       <main className="flex-1 pt-16">
         <section className="relative h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-9" />
-          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="https://i.pinimg.com/736x/15/43/7f/15437f6be04ed55e7d324812cdb28e78.jpg"
+          >
             <source src="/video.mp4" type="video/mp4" />
             Seu navegador não suporta o vídeo.
           </video>

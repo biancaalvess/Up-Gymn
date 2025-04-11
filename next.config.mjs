@@ -1,8 +1,11 @@
-let userConfig = undefined
+// Importando a configuração do usuário com a sintaxe do ES Modules
+let userConfig = undefined;
 try {
-  userConfig = await import('./v0-user-next.config')
+  // Usando a sintaxe de importação dinâmica
+  userConfig = await import('./v0-user-next.config.mjs');
 } catch (e) {
-  // ignore error
+  // Ignorando o erro caso o arquivo não exista
+  // console.error('Erro ao carregar a configuração do usuário:', e);
 }
 
 /** @type {import('next').NextConfig} */
@@ -11,15 +14,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+};
 
-module.exports = nextConfig
-
-mergeConfig(nextConfig, userConfig)
+// Função de mesclagem da configuração do Next.js com a configuração do usuário
+mergeConfig(nextConfig, userConfig);
 
 function mergeConfig(nextConfig, userConfig) {
   if (!userConfig) {
-    return
+    return;
   }
 
   for (const key in userConfig) {
@@ -30,11 +32,12 @@ function mergeConfig(nextConfig, userConfig) {
       nextConfig[key] = {
         ...nextConfig[key],
         ...userConfig[key],
-      }
+      };
     } else {
-      nextConfig[key] = userConfig[key]
+      nextConfig[key] = userConfig[key];
     }
   }
 }
 
-export default nextConfig
+// Exportando a configuração para o Next.js
+export default nextConfig;
