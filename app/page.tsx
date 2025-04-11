@@ -230,7 +230,7 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="https://i.pinimg.com/736x/15/43/7f/15437f6be04ed55e7d324812cdb28e78.jpg"
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src="/public/video.mp4" type="video/mp4" />
             Seu navegador não suporta o vídeo.
           </video>
           <div className="container relative z-20 flex flex-col items-start justify-center h-full">
